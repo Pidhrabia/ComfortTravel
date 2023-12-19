@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/style.min.css" />
+    <title>Confort Travel</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header__body">
+            <a href="#" class="header__logo">
+              <img src="./images/light_logo.svg" alt="" />
+            </a>
+            <div class="header__burger">
+              <span></span>
+            </div>
+            <nav class="header__menu">
+              <ul class="header__list">
+                <li><a href="#home" class="header__link">Головна</a></li>
+                <li><a href="#about_us" class="header__link">Про нас</a></li>
+                <li><a href="#routes" class="header__link">Маршрути</a></li>
+                <li><a href="#price" class="header__link">Ціни</a></li>
+                <li><a href="#contacts" class="header__link">Контакти</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <main>
+        <section id="home" class="main-section">
+          <div class="overlay"></div>
+          <div class="title">
+            <h1>Вас вітає Comfort Travel</h1>
+            <p>Більше 10 років на ринку міжнародних перевезень</p>
+          </div>
+        </section>
+        <section id="about_us" class="about_us-section">
+          <div class="section_title">
+            <h2>Хто такий Comfort Travel</h2>
+          </div>
+          <div class="section_description">
+            <p>
+              Comfort Travel - компанія, яка протягом більше 10 років здійснює
+              регулярні перевезення вантажів та пасажирів із України до Франції
+              та з України до Німеччини. Ми гарантуємо своїм клієнтам своєчасну
+              доставку і максимальний комфорт під час подорожі. Завдяки
+              безпечному та надійному перевезенню ми здобули велику кількість
+              задоволених клієнтів.
+            </p>
+          </div>
+        </section>
+        <section id="routes" class="route-section">
+          <div class="route">
+            <h2>Маршрути</h2>
+            <div class="tab_box">
+              <button class="tab_btn active" onclick="showMap('France')">
+                Україна-Франція
+              </button>
+              <button class="tab_btn" onclick="showMap('Germany')">
+                Україна-Німеччина
+              </button>
+              <div class="line"></div>
+            </div>
+            <div class="content_box">
+              <div class="content active" id="FranceMap">
+                <div id="mapFrance" class="map-container"></div>
+              </div>
+              <div class="content" id="GermanyMap">
+                <div id="mapGermany" class="map-container"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="price" class="price-section">
+          <h2>Вартість поїздки</h2>
+          <div class="price-content">
+            <div class="price-item">
+              <h3>100 €</h3>
+              <hr />
+              <p>Дорослий в обидві сторони (багаж до 40 кг)</p>
+            </div>
+            <div class="price-item">
+              <h3>80 €</h3>
+              <hr />
+              <p>Дитячий від 7 до 15 років включно (багаж до 40 кг)</p>
+            </div>
+            <div class="price-item">
+              <h3>50 €</h3>
+              <hr />
+              <p>Дитячий до 6 років включно (багаж до 20 кг)</p>
+            </div>
+            <div class="price-item">
+              <h3>1 €</h3>
+              <hr />
+              <p>Вартість посилки за 1кг.</p>
+            </div>
+          </div>
+        </section>
+        <section id="contacts" class="contacts-section">
+          <div class="contacts-content">
+            <div class="contacts-item">
+              <h2>Контакти</h2>
+              <p class="address">
+                м.Івано-Франківськ,<br />
+                вул. Мулика 35, офіс 10
+              </p>
+              <p class="phone">
+                <a href="tel:" class="number">+380982503878</a> - Євген
+                <a href="tel:" class="number">+380978211971</a> - Володя
+              </p>
+
+              <p class="social">
+                <a href="" class="logo"
+                  ><img src="./images/instagram.png" alt="Instagram logo"
+                /></a>
+                <a href="" class="logo"
+                  ><img src="./images/facebook.png" alt="Facebook logo"
+                /></a>
+              </p>
+            </div>
+            <div class="contacts-map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2621.5686847447487!2d24.71874347680762!3d48.92360929611413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4730c16e0dedbcf7%3A0xc56f8339433f753e!2z0LLRg9C70LjRhtGPINCc0LjRhdCw0LnQu9CwINCc0YPQu9C40LrQsCwgMzUsINCG0LLQsNC90L4t0KTRgNCw0L3QutGW0LLRgdGM0LosINCG0LLQsNC90L4t0KTRgNCw0L3QutGW0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgNzYwMDA!5e0!3m2!1suk!2sua!4v1702975559765!5m2!1suk!2sua"
+                width="600"
+                height="100"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <div class="footer-info">
+          <div class="info-item">Copyright &copy;2023 All rights reserved</div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSb7dhvIfJhLpEcOcL0pQVCVDuCqbC_Rg&callback=initMap"
+      async
+      defer
+    ></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/tabs.js"></script>
+  </body>
+</html>

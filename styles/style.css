@@ -1,0 +1,383 @@
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body{
+    height: 100%;
+}
+
+.wrapper{
+    width: 100%;
+}
+
+.header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+}
+
+.header:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #B30000;
+    z-index: 2;
+}
+
+.header .container{
+    max-width: 1180px;
+    margin: 0px auto;
+    padding: 0px 10px;
+}
+
+.header__body{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+}
+
+.header__logo{
+    flex: 0 0 150px;
+    position: relative;
+    z-index: 3;
+}
+
+.header__logo img{
+    max-width: 100%;
+}
+
+.header__list{
+    display: flex;
+    position: relative;
+    z-index: 2;
+}
+
+.header__list li{
+    list-style: none;
+    margin: 0px 0px 0px 20px;
+}
+
+.header__link{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'karla', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.header__link:hover{
+    color: #ffae02;
+}
+
+.header__burger{
+    display: none;
+}
+
+/*Основні стилі*/
+/*Головний розділ*/
+main{
+    max-width: 1920px;
+    width: 100%;
+    height: 100%;
+    padding: 80px 0px 15px 0px;
+}
+
+.main-section {
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+    background-image: linear-gradient(135deg, rgba(179, 0, 0, 0.4), rgba(179, 0, 0, 0.4)),  url("../images/backgroun_fon.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    height: 95vh;
+}
+
+.title{
+    padding: 0px 5px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title h1{
+    font-size: calc(42px + (33 + 33 * 0.7) * ((100vw - 320px) / 1920));
+    margin: 0px 0px 10px 0px;
+}
+
+.title p{
+    font-size: calc(12px + (20 + 20 * 0.7) * ((100vw - 320px) / 1920));
+    margin: 10px 0px 0px 0px;
+}
+
+/*Розділ "Про нас"*/
+.about_us-section{
+    margin: 0px auto;
+    max-width: 1180px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 90px 10px;
+    line-height: 45px;
+    justify-content: center;
+}
+
+.section_title{
+    text-align: right;
+    max-width: 285px;
+    width: 100%;
+    font-family: system-ui, sans-serif;
+    font-size: 20px;
+    padding-right: 20px;
+}
+
+.section_title h2{
+    color: #B30000;
+}
+
+.section_description{
+    text-align: left;
+    max-width: 800px;
+    width: 100%;
+    padding-left: 20px;
+    font-size: 22px;
+    font-family: system-ui, sans-serif;
+    font-weight: 400;
+}
+
+/*Price*/
+.price-section{
+    text-align: center;
+    margin: 0px auto;
+    max-width: 1920px;
+    width: 100%;
+    padding: 70px 10px;
+    line-height: 45px;
+    background-color: rgb(26, 26, 26);
+    color: #ffffff;
+}
+
+.price-content{
+    margin: 0px auto;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.price-item{
+    max-width: 300px;
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
+    padding: 20px 20px;
+}
+
+.price-section h2{
+    color: #B30000;
+    font-family: system-ui, sans-serif;
+    font-size: calc(36px + (12 + 12 * 0.7) * ((100vw - 320px) / 1920));
+    margin: 0px 0px 70px 0px;
+}
+
+.price-item h3{
+      font-size: calc(34px + (30 + 30 * 0.7) * ((100vw - 320px) / 1920));
+}
+
+.price-item hr{
+    width: 25%;
+    height: 3px;
+    background-color: #B30000;
+    margin: 30px auto 15px;
+}
+
+.price-item p{
+    font-size: 22px;
+}
+
+/*Route*/
+
+.route-section{
+    display: flex;
+    justify-content: center;
+    background-color: #fafafa;
+}
+
+.route-section .tabs{
+    margin: 0px auto;
+    text-align: center;
+}
+
+.route-section .tabs .tab{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px 0px 0px;
+}
+
+.route{
+    max-width: 900px;
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+}
+
+.route h2{
+    color: #B30000;
+    font-family: system-ui, sans-serif;
+    font-size: calc(36px + (12 + 12 * 0.7) * ((100vw - 320px) / 1920));
+    margin: 0px 0px 10px 0px;
+}
+
+.tab_box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid rgba(229, 229, 229);
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+}
+
+.tab_box, .tab_btn{
+    font-size: 18px;
+    font-weight: 600;
+    color: #919191;
+    background: none;
+    padding: 18px;
+    cursor: pointer;
+}
+
+.tab_box .tab_btn.active{
+    color: #B30000;
+    transition: all 0.3s ease-in-out;
+}
+
+.content_box .content.active{
+    display: block;
+}
+
+.content_box .content{
+    display: none;
+}
+
+.content_box .content h2{
+    margin-bottom: 10px;
+}
+
+.line{
+    position: absolute;
+    top: 62px;
+    left: 0;
+    width: 90px;
+    height: 3px;
+    background-color: #B30000;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.map-container {
+  width: 100%; /* Або задайте розміри, які вам потрібні */
+  height: 400px; /* Задайте висоту, яка вам потрібна */
+  position: relative; /* Можливо, знадобиться позиція relative або інша, яка підходить вам */
+}
+
+/*Contacts*/
+
+.contacts-section{
+    background-color: #fcfcfc;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.contacts-section h2{
+    color: #B30000;
+    font-size: calc(22px + (12 + 12 * 0.7) * ((100vw - 320px) / 1920));
+    line-height: 2;
+}
+
+.contacts-content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    line-height: 3;
+}
+
+.contacts-item{
+    text-align: center;
+    font-size: calc(20px + (0 + 0 * 0.7) * ((100vw - 320px) / 1920));
+    max-width: 290px;
+    width: 100%;
+}
+
+.contacts-item .address,
+.contacts-item .phone{
+    color: black;
+    font-size: calc(20px + (0 + 0 * 0.7) * ((100vw - 320px) / 1920));
+}
+
+.contacts-item .social{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.contacts-item .number{
+    color: black;
+    text-decoration: none;
+    font-size: calc(20px + (0 + 0 * 0.7) * ((100vw - 320px) / 1920));
+}
+
+.contacts-item .logo img{
+    text-align: left;
+    width: 30px;
+}
+
+.contacts-map{
+    margin: 25px 0px 0px 0px;
+width: 1000px;
+height: 340px;
+}
+
+.contacts-map iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+}
+
+/*Footer*/
+footer{
+    width: 100%;
+    height: 50px;
+    background-color: #B30000;
+    color: #ffffff;
+    font-size: calc(14px + (2 + 2 * 0.7) * ((100vw - 320px) / 1920));
+    font-family: system-ui, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
